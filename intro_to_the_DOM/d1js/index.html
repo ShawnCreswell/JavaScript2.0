@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 onclick="hide(this)">More JavaScript</h1>
+    <button onclick="clicked(this)">Click Me</button>
+    <button onclick="increment(this)">1</button>
+    <h2>Likes</h2>
+    <p id="likes">1</p>
+    <button onclick="increment(likes); alert('liked') ">Click to like</button>
+    <h3>Rule of thumb</h3>
+    <p onclick="hide(this)">If the element you want to mulipulate is ALSO the elment with the listener use the THIS keyword.</p>
+    <p>If the element you want to mulipulate is NOT the elment with the listener use the ID of the elemet we want to munipulate.</p>
+
+    <h3>LIKE ME: <span id="likeMe">1</span></h3>
+    <button onclick="increment(likeMe)">Click to like me</button>
+   
+   
+   <select onchange="picked(this)">
+    <!-- <select onchange="alert('You Picked'+ this.value)"></select> -->
+    <option value="shawn">shawn</option>
+    <option value="omar">omar</option>
+    <option value="ciso">ciso</option>
+   </select>
+
+   <img onclick="switchPic(this)" src="./images/izuku.jpeg" alt="picture of deku">
+   
+    <script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header flexed">
+        <h1>Dojonary</h1>
+        <textarea class="search" name="search" id="" cols="30" rows="1">search</textarea>
+        <button class="login-btn" onclick="logout(this)">Login</button>
+    </div>
+
+    <div class="container flexed">
+        <div class="left-side">
+            <div class="top-box flexed">
+                <div class="inner-left padding">
+                    <h1>ninja</h1>
+                    <p>noun</p>
+                    <p>Plural: <em>ninjas</em></p>
+                    <button class="btn-yellow" onclick="likes(this)">13 Likes</button>
+                </div>
+                <div class="inner-right">
+                        <P>A practioner skilled in the <a href="#">Japanese</a> art of <a href="">ninjutsu</a></P>
+                </div>
+            </div>
+            <div class="bottom-box flexed">
+                <div class="inner-left padding">
+                    <h1>ninja</h1>
+                    <p>noun</p>
+                    <p>Plural: <em>ninjas</em></p>
+                    <button class="btn-yellow" onclick="likes(this)">37 Likes</button>
+                </div>
+                <div class="inner-right">
+                        <P>A<a href="#">Programmer</a> who breaks down problems with <a href="">zen</a>-like focus</P>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="top-box-2">
+                <h2>Dojonary is defined by YOU</h2>
+                <button class="btn-green" onclick="hide(this)">Add Definition</button>
+            </div>
+            <!-- <div class="bottom-box-2"> -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <button onclick="turnOff(this)">On</button>
+    <button onclick="turnOff(this)">On</button>
+    <button onclick="turnOff(this)">On</button> -->
+
+    <script src="./script.js"></script>
+</body>
+</html>

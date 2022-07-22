@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Begin Utilites */
+
+.flexed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.header {
+    background-color: lightgray;
+    width: 750px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.search {
+    color: grey;
+    border: 2px solid black;
+}
+
+.login-btn {
+    color: white;
+    background-color: rgb(43,120,228);
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 50px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.container {
+    /* background-color: aqua; */
+    /* min-height: 500px; */
+    width: 750px;
+    margin: 0 auto;
+}
+
+.left-side {
+    /* background-color: red; */
+    /* min-height: 500px; */
+    flex: 2;
+}
+
+.top-box {
+    /* background-color: green; */
+    /* min-height: 250px; */
+    margin-bottom: 1.5rem;
+    border: 3px solid black;
+    padding: 1rem;
+}
+
+.inner-left {
+    /* min-height: 250px; */
+    /* background-color: green; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-yellow {
+    color: black;
+    background-color:rgb(255,217,102);
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 80px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.inner-right {
+    /* min-height: 250px; */
+    /* background-color: yellow; */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.underline {
+    color: blue;
+    text-decoration: underline;
+}
+
+.bottom-box {
+    /* background-color: purple; */
+    /* min-height: 250px; */
+    border: 3px solid black;
+    padding: 1rem;
+}
+
+.right-side {
+    /* background-color: yellow; */
+    min-height: 500px;
+    flex: 1;
+}
+
+.top-box-2 {
+    /* background-color: green; */
+    /* min-height: 250px; */
+    margin-bottom: 1.5rem;
+    border: 3px solid black;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-green {
+    background-color: rgb(148,196,125);
+    color: black;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 100%;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.bottom-box-2 {
+    /* background-color: pink; */
+    min-height: 250px;
+    border: 3px solid black;
+    padding: 1.5rem;
+}
+
+.padding {
+    padding: 1.5rem;
+}
+
+
