@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Begin Utilites */
+
+.flexed {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.top-purple{
+    background-color: rgb(153,0,255);
+    min-height: 10px;
+    width: 750px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: rgb(51,51,51);
+    width: 750px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+}
+
+
+
+.search {
+    color: grey;
+    border: 2px solid black;
+}
+
+.login-btn {
+    color: white;
+    background-color: rgb(153,0,255);
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    width: 50px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.container {
+    /* background-color: aqua; */
+    min-height: 250px;
+    width: 750px;
+    margin: 0 auto;
+}
+
+.left-side {
+    min-height: 500px;
+    flex: 2;
+    /* background-color: red; */
+
+}
+
+.top-box {
+    /* background-color: purple; */
+    min-height: 250px;
+    border: 3px solid black;
+    margin-bottom: 1.5rem;
+}
+
+.play-screen {
+    /* background-color: aqua; */
+    min-height: 250px; 
+}
+
+.play-bar {
+    /* background-color: blueviolet; */
+    min-height: 50px;
+    border-top: 3px solid black;
+    padding: .5rem;
+}
+
+i {
+    color: black;
+    border: 1px solid black ;
+    border-radius: 50%;   
+}
+
+
+
+.bottom-box {
+    background-color: red;
+    min-height: 250px;
+}
+
+.right-side {
+    min-height: 250px;
+    flex: 1;
+    /* background-color: green; */
+}
+
+.top-box-2 {
+    /* background-color: yellow; */
+    min-height: 25px;
+    border-bottom: 3px solid black;
+}
+
+.bottom-box-2 {
+    /* background-color: purple; */
+    min-height: 250px;
+
+}
+
+
+
+/* .row {
+    display: flex;
+    justify-content: center;
+
+}
+
+.notes {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: lightyellow;
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px #999;
+    position: relative;
+    bottom: 5px;
+    cursor: pointer;
+} */
