@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-city flexed">
+            <h1>DojoWeather</h1>
+            <div class="flexed">
+               
+                    <h2 id="cityD" onclick="cityB(this)">Burbank</h2>
+
+              
+                    <h2 id="cityD" onclick="cityC(this)">Chicago</h2>
+            
+        
+                    <h2 id="cityD" onclick="cityD(this)">Dallas</h2>
+               
+            </div>
+        </div>
+    </div>
+    <div class="city flexed">
+        <h2 id="black" >San Jose</h2>
+        <div class="flexed" >
+            <p id="show-temp" >Show temperature in </p>
+            <select onchange="picked(this)" name="tempD" id="tempD">
+                <option id="cel" value="°C">°C</option>
+                <option id="fah" value="°F">°F</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sub-container flexed">
+            <div class="col-1">
+                <div class="today col-flex">
+                    <h2 id="black" >Today</h2>
+                    <img src="./assets/some_rain.png" alt="">
+                    <p>some rain</p>
+                </div>
+                <div class="temps-1 flexed">
+                    <h2 class="red" id="red1">24°</p>
+                    <h2 class="blue" id="blue1">18°</p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="today col-flex">
+                    <h2 id="black" >Tommorow</h2>
+                    <img src="./assets/some_sun.png" alt="">
+                    <p>some rain</p>
+                </div>
+                <div class="temps-1 flexed">
+                    <h2 class="red" id="red2">27°</p>
+                    <h2 class="blue" id="blue2">19°</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="today col-flex">
+                    <h2 id="black" >Friday</h2>
+                    <img src="./assets/some_clouds.png" alt="">
+                    <p>some rain</p>
+                </div>
+                <div class="temps-1 flexed">
+                    <h2 class="red" id="red3">21°</p>
+                    <h2 class="blue" id="blue3">16°</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="today col-flex">
+                    <h2 id="black" >Saturday</h2>
+                    <img src="./assets/some_sun.png" alt="">
+                    <p>some rain</p>
+                </div>
+                <div class="temps-1 flexed">
+                    <h2 class="red" id="red4">26°</p>
+                    <h2 class="blue" id="blue4">21°</p>
+                </div>
+            </div>
+        </div>
+        <div id="popUp" class="cookie flexed">
+            <div class="pic-cookie">
+                <img src="./assets/cookie.png" alt="Picture of Cookie">
+            </div>
+            <div class="text-cookie">
+                <h3>Stop! Cookie Time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide socail medai features and to analyse our traffic. <a href="#">Read More...</a></p>
+            </div>
+            <div>
+                <button onclick="hide(popUp)">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
