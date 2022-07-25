@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+        </ul>
+        <div class="button">
+            <button class="btn">Sign Out</button>
+        </div>
+    </div>
+    <div class="container flexed">
+        <div class="box-1">
+            <div class="profile">
+                <div class="top-bar"></div>
+                <div class="bottom-bar">
+                    <div class="pro-pic">
+                        <img class="picture-2" src="./images/jane-m.jpg" alt="Picture of Jane">
+                        <h5 id="nameJ">Jane Doe</h5>
+                        <div class="location">
+                            <img class="icon-2" src="./icons/map-marker.png" alt="map marker">
+                            <p>Seattle</p>
+                        </div>
+                        <div>
+                            <p>Developer | Engineer | Problem Solver</p>
+                            <p>Master of shadows and the internet</p>
+                        </div>
+                        <div class="location">
+                            <img class="icon-3" src="./icons/gear.png" alt="Edit gear icon">
+                            <button><a class="more" onclick="change(nameJ)" href="#">edit profile</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education">
+                <div class="top-bar-2">
+                    <h1>Education</h1>
+                </div>
+                <div class="bottom-bar-2">
+                    <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                    <h3>Dec 2019 - Mar 2020</h3>
+                    <h2>Triple black belt in Python, MERN, and C#...</h2>
+                </div>
+            </div>
+        </div>
+        <div class="box-2">
+            <div class="request">
+                <div class="top-bar-3 flexed">
+                    <div class="icon-4">
+                        <h4 id="numId">2</h4>
+                    </div>
+                    <div>
+                        <h1>Connection Requests</h1>
+                    </div>
+                </div>
+                <div class="bottom-bar-3">
+                    <div id="todd" class="todd flexed">
+                        <div class="flexed">
+                            <img class="picture" src="./images/todd-s.jpg" alt="Picture of Todd">
+                            <p>Todd E</p>
+                        </div>
+                        <div class="checked">
+                            <button><img class="icon" onclick="hide(todd, onCon, numId)" src="./icons/accept-circle.png" alt="accept"></button>
+                            <button><img class="icon" onclick="hide2(todd, numId)" src="./icons/close-circle.png" alt="close"></button>
+                        </div>
+                    </div>
+                    <div id="phil" class="flexed">
+                        <div class="flexed">
+                            <img class="picture" src="./images/phil-s.jpg" alt="Picture of Phil">
+                            <p>Phil K</p>
+                        </div>
+                        <div class="checked">
+                            <button><img class="icon" onclick="hide(phil, onCon, numId)" src="./icons/accept-circle.png" alt="accept"></button>
+                            <button><img class="icon" onclick="hide2(phil, numId)" src="./icons/close-circle.png" alt="close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="your-con">
+                <div class="top-bar-4 flexed">
+                    <div class="icon-5">
+                        <h4><span id="onCon">500</span>+</h4>
+                    </div>
+                    <div>
+                        <h1>Your Connections</h1>
+                    </div>
+                </div>
+                <div class="bottom-bar-4">
+                    <div class="names">
+                        <img class="picture" src="./images/adrien-s.jpg" alt="Picture of Adrian">
+                        <p>Adrien D</p>
+                    </div>
+                    <div class="names">
+                        <img class="picture" src="./images/anne-s.jpg" alt="Picture of Ann">
+                        <p>Anne J</p>
+                    </div>
+                    <div class="names">
+                        <img class="picture" src="./images/alayne-s.jpg" alt="Picture of Alayne">
+                        <p>Alayne T</p>
+                    </div>
+                    <div class="names">
+                        <img class="picture" src="./images/arry-s.jpg" alt="Picture of Arry Y">
+                        <p>Arry Y</p>
+                    </div>
+                </div>
+                <div class="end-bar">
+                    <a class="more" href="#">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
