@@ -63,7 +63,7 @@ select {
 
 .container {
     /* background-color: aqua; */
-    min-height: 500px;
+    min-height: 1500px;
     width: 750px;
     margin: 0 auto;
     margin-top: 1.5rem;
@@ -110,6 +110,9 @@ select {
     border: 3px solid black;
     margin-top: 1.5rem;
     padding: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 .btn-cookie {
