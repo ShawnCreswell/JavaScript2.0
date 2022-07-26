@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-bar {
+    background-color: green;
+    min-height: 100px;
+}
+
+.container {
+    background-color: green;
+    min-height: 250px;
+    width: 900px;
+    background-color: white;
+    /* background-image: url(./Images/panorama-space-scene-with-planets-stars-galaxies-banner-template-many-nebulae-galaxies-space-many-light-years-away-deep-universe-large-scale-structure-3d-rendered_91497-7933.webp); */
+    margin: 0 auto;
+}
+
+
+
+h1 {
+    color: green;
+    text-shadow: 3px 3px 3px black;
+    /* background-color: white;
+    border: 5px solid black;
+    width: 200px; */
+}
+
+.nameZ {
+    background-color: white;
+    /* min-height: 150px; */
+    /* min-width: 150px; */
+    border: 3px solid black;
+    box-shadow: 15px 15px 15px black;
+    padding: .5rem;
+}
+
+.icons {
+    margin-top: .5rem;
+    gap: .5rem;
+}
+
+img {
+    box-shadow: 3px 3px 3px black;
+    background-color: none;
+}

@@ -25,6 +25,10 @@
 .margin-top {
     margin-top: .5rem;
 }
+
+.p {
+    padding-left: 1em;
+}
 /* Utilities End */
 
 /* Header Start */
@@ -96,6 +100,10 @@ body {
 .rotated {
     transform: rotate(180deg);
 
+}
+
+.chevorn {
+    cursor: pointer;
 }
 
 .bottom-box {
