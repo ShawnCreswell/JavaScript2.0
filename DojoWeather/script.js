@@ -1,13 +1,13 @@
 function cityB(element) {
-    alert('Burbank was Selected')
+    alert('Burbank was Selected. Loading weather report...')
 }
 
 function cityC(element) {
-    alert('Chicago was Selected')
+    alert('Chicago was Selected. Loading weather report...')
 }
 
 function cityD(element) {
-    alert('Dallas was Selected')
+    alert('Dallas was Selected. Loading weather report...')
 }
 
 function hide(element) {
