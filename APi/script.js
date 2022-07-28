@@ -19,7 +19,7 @@ function createCard(coderData) {
             <img class ="userCard" src="${coderData.avatar_url}" alt="="${coderData.login}">
         </div>
         <div class="right">
-            <h2>Shawn Creswell</h2>
+            <h2>${coderData.name}</h2>
             <p><strong>login: </strong>${coderData.login}/p>
             <p><strong>location: </strong>${coderData.location}</p>
             <p><strong>Repos: </strong>${coderData.repo}</p>
