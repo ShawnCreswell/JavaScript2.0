@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    gap: 1rem;
+}
+
+.nav-bar {
+    background-color: black;
+    min-height: 100px;
+}
+
+.container {
+    background-color: rgb(30, 41, 33);
+    min-height: 500px;
+}
+
+label {
+    background-color: red;
+}

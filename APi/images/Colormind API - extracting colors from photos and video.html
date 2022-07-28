@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://colormind.io/api-access/ -->
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="shortcut icon" href="http://colormind.io/favicon32.gif" type="image/x-icon" sizes="32x32">
+		<link rel="shortcut icon" href="http://colormind.io/favicon16.gif" type="image/x-icon" sizes="16x16">
+		
+		<link rel="canonical" href="http://colormind.io/blog/">
+		
+		
+    	<meta http-equiv="content-language" content="en">
+    	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="title" content="Colormind blog">
+		<meta name="description" content="The Colormind has a REST API that allows you to build applications with beautiful generated color palettes">
+
+		<title>Colormind API - extracting colors from photos and video</title>
+		
+		<link rel="stylesheet" type="text/css" href="./Colormind API - extracting colors from photos and video_files/bootstrap.min.css">
+		
+		<link href="./Colormind API - extracting colors from photos and video_files/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="./Colormind API - extracting colors from photos and video_files/style2.css">
+		<link href="./Colormind API - extracting colors from photos and video_files/prism.css" rel="stylesheet">
+		<script async="" src="./Colormind API - extracting colors from photos and video_files/analytics.js"></script><script src="./Colormind API - extracting colors from photos and video_files/prism.js"></script>
+		
+		<style>
+		pre{
+		background-color: #111;
+		margin: 1em 0 3em 0 !important;
+		border: none;
+		}
+		
+		</style>
+		<script type="application/ld+json">
+		{  "@context" : "http://schema.org",
+		   "@type" : "WebSite",
+		   "url" : "http://colormind.io/",
+		   "name" : "Colormind",
+		   "image" : "http://colormind.io/img/logo.png",
+		   "description" : "Generate color palettes with deep learning - intelligent color scheme suggestions from your selected colors",
+		   "inLanguage" : [
+			"en"
+		   ],
+		   "copyrightYear" : "2017",
+		   "copyrightHolder" : [
+			{ "@type" : "Person",
+			  "url" : "http://colormind.io",
+			  "name" : "Jack Qiao",
+			  "contactPoint" : [
+			  { "@type" : "ContactPoint",
+				"url" : "http://colormind.io",
+				"email" : "jack@colormind.io",
+				"contactType" : "customer service"
+			  } ]
+			} ]
+		}
+		</script>
+	</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="http://colormind.io/"><img alt="Colormind Logo" src="./Colormind API - extracting colors from photos and video_files/logo_nav.svg"><span> Colormind</span></a>
+	</div>
+	<div id="navbar">
+	  <ul class="nav navbar-nav navbar-right social">
+		<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcolormind.io%2Fblog%2F"><img alt="facebook icon" src="./Colormind API - extracting colors from photos and video_files/facebook.svg"></a></li>
+		<li><a target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20colormind%2C%20the%20smart%20color%20palette%20generator&amp;url=http%3A%2F%2Fcolormind.io%2Fblog%2F"><img alt="twitter icon" src="./Colormind API - extracting colors from photos and video_files/twitter.svg"></a></li>
+	  </ul>
+	  
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="http://colormind.io/bootstrap/"><i class="glyphicon glyphicon-th"></i><span> Website Colors</span></a></li>
+		<li><a href="http://colormind.io/template/material-dashboard/"><i class="glyphicon glyphicon-bookmark"></i><span> Templates</span></a></li>
+		<li><a href="http://colormind.io/image/"><i class="glyphicon glyphicon-camera"></i><span> Image Upload</span></a></li>
+	  </ul>
+	</div>
+  </div>
+</nav>
+
+<div class="container">	
+	
+	<div class="row">
+		<div class="col-md-35 off-md-15" style="margin-top: 3em">
+			<h1>Colormind API</h1>
+			Colormind has a REST API. The API allows you to access all the features that you see on Colormind.io.
+			<br><br>
+			The API is free for personal and non-commercial use. If you're looking to use it in a commercial application, get in touch by email: jack@colormind.io
+			<br><br>
+			To get a random color palette:
+			<pre class=" language-bash"><code class=" language-bash">curl <span class="token string">'http://colormind.io/api/'</span> --data-binary <span class="token string">'{"model":"default"}'</span>
+					
+<span class="token comment" spellcheck="true"># {"result":[[214,78,69],[247,242,163],[201,216,147],[57,141,112],[62,80,64]]}</span>
+				</code></pre>
+			
+			To get color suggestions with input, label blank fields with the "N" character:
+			<pre class=" language-bash"><code class=" language-bash">curl <span class="token string">'http://colormind.io/api/'</span> --data-binary <span class="token string">'{"input":[[44,43,44],[90,83,82],"N","N","N"],"model":"default"}'</span>
+					
+<span class="token comment" spellcheck="true"># {"result":[[49,47,49],[91,83,81],[133,155,143],[226,209,167],[235,198,126]]}</span>
+				</code></pre>
+			
+			You can use different models by passing in the model name. The models "default" and "ui" are always available, but others will change each day.<br><br>
+			To see which models are currently available, check the list endpoint:
+			
+			<pre class=" language-bash"><code class=" language-bash">curl <span class="token string">'http://colormind.io/list/'</span>
+					
+<span class="token comment" spellcheck="true"># {"result":["default","ui","makoto_shinkai","metroid_fusion","akira_film","flower_photography"]}</span>
+				</code>
+			</pre>
+			
+			The models are refreshed every day at +8 UTC (midnight PDT). The service will be down for 30 seconds while the new models are loaded into memory.
+			<br><br>
+			
+			Query the API in Javascript like so:
+			<pre class=" language-javascript"><code class=" language-javascript">
+<span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token string">"http://colormind.io/api/"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+	model <span class="token punctuation">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+	input <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">44</span><span class="token punctuation">,</span><span class="token number">43</span><span class="token punctuation">,</span><span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">83</span><span class="token punctuation">,</span><span class="token number">82</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"N"</span><span class="token punctuation">,</span><span class="token string">"N"</span><span class="token punctuation">,</span><span class="token string">"N"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+http<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> http<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> palette <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+http<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"POST"</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+http<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// [[42, 41, 48], [90, 83, 84], [191, 157, 175], [188, 138, 125], [215, 170, 66]]</span>
+<span class="token comment" spellcheck="true">// note that the input colors have changed as well, by a small amount</span>
+				</code>
+			</pre>
+		</div>
+	</div>
+	
+	<hr>
+	<div class="row footer">
+		<div class="col-md-25 off-md-15">
+			<a href="http://colormind.io/">Colormind</a>
+			<a href="http://colormind.io/bootstrap/">Bootstrap UI</a>
+			<a href="http://colormind.io/template/">Templates</a>
+			<a href="http://colormind.io/blog/">Blog</a>
+			<a href="http://colormind.io/api-access/#">API Access</a>
+		</div>
+		
+		<div class="col-md-25">
+			Got questions? Contact me directly at jack@colormind.io
+		</div>
+		
+	</div>
+</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52772108-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+
+
+
+</body></html>
